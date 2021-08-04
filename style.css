@@ -1,0 +1,15 @@
+body
+{
+    background-color: rgb(139, 157, 206);
+    font-size: 2rem;
+    text-align: center;
+}
+
+input
+{
+    font-size: 2rem;
+    padding: 0.5%;
+    margin:1%;
+    border-radius: 5%;
+    border-bottom: 2px black solid;
+}
