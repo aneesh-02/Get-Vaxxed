@@ -50,7 +50,9 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="https://covid-19.ontario.ca/covid-19-vaccines-ontario?gclid=CjwKCAjw3riIBhAwEiwAzD3TibQ2i8iCL67Ie7QrhgFxv-1yCqBaDlVCT-HLEUXQj6WW7X5XqkRqFhoC90YQAvD_BwE&gclsrc=aw.ds">Vaccination Coverage Report</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://covid-19.ontario.ca/covid-19-vaccines-ontario?gclid=CjwKCAjw3riIBhAwEiwAzD3TibQ2i8iCL67Ie7QrhgFxv-1yCqBaDlVCT-HLEUXQj6WW7X5XqkRqFhoC90YQAvD_BwE&gclsrc=aw.ds">Vaccination
+                                    Coverage Report</a></li>
                         </ul>
                     </li>
 
@@ -109,7 +111,7 @@
     <div class="container mt-4 px-5 py-1" id="login">
         <h4 class="center"> Please enter details to create an account </h4> <br>
 
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label "><h5>First Name:</h5></label>
             <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="">
         </div>
@@ -122,19 +124,42 @@
         <div class="mb-3">
             <label for="exampleFormControlInput3" class="form-label "><h5>Last Name:</h5></label>
             <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="">
-        </div>
+        </div> -->
 
+        <div class="row">
+            <div class="col">
+                <h5>First Name:</h5>
+                <input type="text" class="form-control" aria-label="First name">
+            </div>
+            <div class="col">
+                <h5>Middle Name:</h5>
+                <input type="text" class="form-control" placeholder="(Optional)" aria-label="Last name">
+            </div>
+
+            <div class="col">
+                <h5>Last Name:</h5>
+                <input type="text" class="form-control" aria-label="Last name">
+            </div>
+        </div>
+        <br>
         <div class="mb-3">
-            <label for="exampleFormControlInput4" class="form-label "><h5>Email address:</h5></label>
-            <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="exampleFormControlInput4" class="form-label ">
+                <h5>Email address:</h5>
+            </label>
+            <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1"
+                placeholder="name@example.com">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput5" class="form-label"> <h5>Password:</h5></label>
+            <label for="exampleFormControlInput5" class="form-label">
+                <h5>Password:</h5>
+            </label>
             <input type="password" class="form-control form-control-lg" id="exampleFormControlInput1"
                 placeholder="Must be 8-20 characters long">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput6" class="form-label"> <h5>Confirm Password:</h5></label>
+            <label for="exampleFormControlInput6" class="form-label">
+                <h5>Confirm Password:</h5>
+            </label>
             <input type="password" class="form-control form-control-lg" id="exampleFormControlInput1"
                 placeholder="Retype Password">
         </div>
@@ -147,12 +172,12 @@
         <div class="center">
             <a class="btn btn-primary btn-danger btn-lg" href="home.html" role="button">Sign Up</a>
         </div>
-        
+
     </div>
 
     <!-- switch to sighnp -->
     <div class="container mt-4 p-1 center">
-        <h4>Already have an acount ? </h4>
+        <h4>Already have an account ? </h4>
         <a class="btn btn-primary btn-danger btn-lg" href="a4.html" role="button">Log In</a>
     </div>
 

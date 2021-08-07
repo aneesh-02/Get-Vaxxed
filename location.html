@@ -1,39 +1,249 @@
-<html>
-    <head>
-        <title> Vaccination Booking : Location </title>
-        <link rel = "stylesheet" href = "style.css">
-    </head>
+<!doctype html>
+<html lang="en">
 
-    <body>
-        <ul class = "no-list-style horizontal-list nav-menu">
-            <li><a href="#"> Home </a>  </li>
-            <li><a href="#"> Help </a> </li>
-            <li><a href="#"> Contact Us </a>  </li>
-            <li><a href="#"> Setting </a> </li>
-            <li><a href="#"> Profile </a>  </li>
-        </ul>
-        
-            <h1>STEP 1/3 </h1>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <form>
-                Please enter a location to filter vaccination centres <br>
-                <input type = "text" placeholder="Postal Code/Location">
-                <input type = "button" value="Search"> <br>
-                <input type = "button" value="Use device location to find Nearby Centres">
-            </form>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-            <div class="location">
-                Select Location:
-                <ul>
-                    <li>Toronto </li>
-                    <li>Brampton </li>
-                    <li>Missisauga </li>
-                    <li>Vaughan </li>
+    <!-- Title, Logo & CSS -->
+    <title> GetVaxxed: Home</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="a4.css">
+
+</head>
+
+<body>
+    <!-- NAVIGATION BAR   -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="logo-img" src="logo.jpg" alt="logo" height="30px" width="30px">
+                GetVaxxed
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="resources.html">Know more about Vaccinations</a></li>
+                            <li><a class="dropdown-item" href="resources.html">How to get Vaccination</a></li>
+                            <li><a class="dropdown-item" href="resources.html">What to expect</a></li>
+                            <li><a class="dropdown-item" href="resources.html">Do's and Dont's</a></li>
+                            <li><a class="dropdown-item" href="resources.html">Vaccine safety</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://covid-19.ontario.ca/covid-19-vaccines-ontario?gclid=CjwKCAjw3riIBhAwEiwAzD3TibQ2i8iCL67Ie7QrhgFxv-1yCqBaDlVCT-HLEUXQj6WW7X5XqkRqFhoC90YQAvD_BwE&gclsrc=aw.ds">Vaccination
+                                    Coverage Report</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Help
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="help.html">Frequenty Asked Questions</a></li>
+                            <li><a class="dropdown-item" href="help.html">Raise an issue</a></li>
+                            <li><a class="dropdown-item" href="help.html">View Helplines</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contactUs.html">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">About us</a>
+                    </li>
+
                 </ul>
 
+                <div class="btn-group me-4" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio1"> English </label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio2"> Français </label>
+
+                </div>
+
+                <form class="d-flex me-5">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+                <div class="mx-2">
+                    <a class="btn btn-primary btn-danger" href="" role="button">Settings</a>
+                    <a class="btn btn-primary btn-danger" href="" role="button">Profile</a>
+                </div>
             </div>
-            <a href="dateTime.html"> <input type = "button" value="NEXT"></a>
-           
-    </body>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB  -->
+    <div class="container mt-4 px-5 py-1 breadcrumb">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="location.html">Step 1/3</a> </li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- FUNCTION -->
+    <div class="container mt-4 px-5 py-1">
+        <h2 class="center"> Enter a location to locate a vaccination centre: </h2> <br>
+
+        <form class="d-flex me-5 location">
+
+            <button class="btn btn-outline-success me-2"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                <h6>Use device location</h6>
+            </button>
+            <input class="form-control me-2" type="search" placeholder="Postal Code/Location" aria-label="Search">
+            <button class="btn btn-outline-primary me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <h6>Search</h6>
+            </button>
+        </form>
+
+
+        <!-- <div class="alert alert-warning alert-dismissible me-5 my-2 p-3 fade show" role="alert" id="liveAlert">
+            <strong>Note!</strong> This website is accessing your device location.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div> -->
+
+    </div>
+
+
+
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">List of nearby Clinics </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container  location-table">
+        
+                <table class="table table-hover table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Vaccine Clinic</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Distance</th>
+                        <th scope="col"> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Shoppers Drug Mart 800</td>
+                        <td>Pharmasave Cedarcourt Pharmacy</td>
+                        <td>3.0 km</td>
+                        <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Shoppers Drug Mart 800</td>
+                        <td>629 Markham Rd</td>
+                        <td>0.5 km</td>
+                        <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>No Frills</td>
+                        <td>629 Markham Rd</td>
+                        <td>2.0 km</td>
+                        <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Shoppers Drug Mart 800</td>
+                        <td>3401 LAWRENCE AVE E</td>
+                        <td>6.8 km</td>
+                        <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Metro Pharmacy</td>
+                        <td>3221 Eglinton Avenue East</td>
+                        <td>10.5 km</td>
+                        <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                
+            
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
 
 </html>
