@@ -1,0 +1,15 @@
+.container
+{
+    border: 2px solid black;
+    
+}
+
+.center
+{
+    text-align: center;
+}
+
+.welcome
+{
+    color: rgb(31, 97, 31);   
+}

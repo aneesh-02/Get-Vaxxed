@@ -10,9 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <!-- Title and Logo     -->
-    <title> GetVaxxed</title>
-    <link rel = "icon" type="image/x-icon" href="logo.jpg">
+    <!-- Title, Logo & CSS -->
+    <title> GetVaxxed: Login</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="a4.css">
 
 </head>
 
@@ -20,7 +21,7 @@
     <!-- NAVIGATION BAR   -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">  
+            <a class="navbar-brand" href="#">
                 <img class="logo-img" src="logo.jpg" alt="logo" height="30px" width="30px">
                 GetVaxxed
             </a>
@@ -32,64 +33,111 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Resources 
+                            Resources
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Know more about Vaccinations</a></li>
-                            <li><a class="dropdown-item" href="#">How to get Vaccination</a></li>
-                            <li><a class="dropdown-item" href="#">What to expect</a></li>
-                            <li><a class="dropdown-item" href="#">Do's and Dont's</a></li>
-                            <li><a class="dropdown-item" href="#">Vaccine safety</a></li>
+                            <li><a class="dropdown-item" href="resources.html">Know more about Vaccinations</a></li>
+                            <li><a class="dropdown-item" href="resources.html">How to get Vaccination</a></li>
+                            <li><a class="dropdown-item" href="resources.html">What to expect</a></li>
+                            <li><a class="dropdown-item" href="resources.html">Do's and Dont's</a></li>
+                            <li><a class="dropdown-item" href="resources.html">Vaccine safety</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Vaccination Coverage Report</a></li>
+                            <li><a class="dropdown-item" href="https://covid-19.ontario.ca/covid-19-vaccines-ontario?gclid=CjwKCAjw3riIBhAwEiwAzD3TibQ2i8iCL67Ie7QrhgFxv-1yCqBaDlVCT-HLEUXQj6WW7X5XqkRqFhoC90YQAvD_BwE&gclsrc=aw.ds">Vaccination Coverage Report</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Help 
+                            Help
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Frequenty Asked Questions</a></li>
-                            <li><a class="dropdown-item" href="#">Raise an issue</a></li>
-                            <li><a class="dropdown-item" href="#">View Helplines</a></li>
+                            <li><a class="dropdown-item" href="help.html">Frequenty Asked Questions</a></li>
+                            <li><a class="dropdown-item" href="help.html">Raise an issue</a></li>
+                            <li><a class="dropdown-item" href="help.html">View Helplines</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Contact us</a>
+                        <a class="nav-link" aria-current="page" href="contactUs.html">Contact us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="aboutUs.html">About us</a>
                     </li>
-                    
+
                 </ul>
-                
+
                 <div class="btn-group me-4" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
                     <label class="btn btn-outline-primary" for="btnradio1"> English </label>
-                  
+
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio2"> Français </label>
-                  
-                  </div>
 
-                <form class="d-flex">
+                </div>
+
+                <form class="d-flex me-5">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
+
+                <div class="mx-2">
+                    <a class="btn btn-primary btn-danger" href="#login" role="button">Login</a>
+                    <a class="btn btn-primary btn-danger" href="signUp.html" role="button">signUp</a>
+                </div>
             </div>
         </div>
     </nav>
+
+    <!-- welcome Message -->
+    <div class="container welcome center">
+        <h1 class="display-1">Welcome to <b>GetVaxxed</b> </h1>
+        <p class="lead">
+        <h3>Book your free vaccination appointment now !
+            </p>
+    </div>
+
+    <!-- login box -->
+    <div class="container mt-4 px-5 py-1" id="login">
+        <h4 class="center"> Please login to your account to continue </h4> <br>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label "><h5>Email address:</h5></label>
+            <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"> <h5>Password:</h5></label>
+            <input type="password" class="form-control form-control-lg" id="exampleFormControlInput1"
+                placeholder="Must be 8-20 characters long">
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input border-2" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div>
+
+        <div class="center">
+            <a class="btn btn-primary btn-danger btn-lg" href="#signUp.html" role="button">Log In</a>
+        </div>
+        
+    </div>
+
+    <!-- switch to sighnp -->
+    <div class="container mt-4 p-1 center">
+        <h4> Do not have an acount ? </h4>
+        <a class="btn btn-primary btn-danger btn-lg" href="signUp.html" role="button">Sign Up</a>
+    </div>
+
+    <br><br>
+
+
 
 
 
