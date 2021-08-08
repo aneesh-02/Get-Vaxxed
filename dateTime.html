@@ -114,15 +114,14 @@
     <div class="container mt-4 px-5 py-1">
         <h2 class="center"> Select a date for the appointment at this location: </h2> <br>
 
-        <form class="d-flex me-5 location">
-
-            
-            <input class="form-control mx-5" type="date" id="date">
-            <button class="btn btn-outline-primary mx-5" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <h6>Search</h6>
-            </button>
+        <form class="d-flex me-5 location" id="form-date">
+            <input class="form-control mx-5" type="date" id="date" name="date">
+            <button type="submit">Submit</button>
         </form>
-
+        <br>
+        <button class="btn btn-outline-primary mx-5" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <h6>Search time slots for this date</h6>
+        </button>
 
         <!-- <div class="alert alert-warning alert-dismissible me-5 my-2 p-3 fade show" role="alert" id="liveAlert">
             <strong>Note!</strong> This website is accessing your device location.
@@ -191,7 +190,7 @@
   
     
     <div class="container mt-4 px-5 py-1 center">
-     <h4> Time selected : __________________________________________ </h4>  
+     <h4> Time selected : <div id="display-time">_________ </div> </h4>  
      <br>
      <a class="btn btn-primary btn-danger btn-lg mx-3" href="location.html" role="button">Previous</a>
       <a class="btn btn-primary btn-success btn-lg mx-3" href="personalDetails.html" role="button">Next</a>
