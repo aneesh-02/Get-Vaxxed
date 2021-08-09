@@ -1,13 +1,43 @@
+// // JS for signUp page
+
+// var signup = document.getElementById("signUp");
+
+// signup.addEventListener("click", saveCreds)
+
+// function saveCreds(e)
+// {
+//     e.preventDefault();
+//     var fname = document.getElementById("fname").value;
+//     var mname = document.getElementById("mname").value;
+//     var lname = document.getElementById("lname").value;
+//     var email = document.getElementById("email").value;
+//     var password = document.getElementById("password").value;
+//     var confirmPassword = document.getElementById("confirmPassword").value;
+
+//     if(password != confirmPassword)
+//     {
+//         alert("Passwords do not match, retype password");
+//     }
+//     else
+//     {
+        
+//     }
+
+//     console.log( fname + mname + lname);
+// }
+
+
+
 // JS for location page
 var buttons = document.getElementsByClassName("selectButton");
 var displayLocation = document.getElementById("displayLocation");
 
 for (var i = 0; i < buttons.length; i++)
 {
-    buttons[i].addEventListener('click', calc)
+    buttons[i].addEventListener('click', locationPrint)
 }
 
-function calc()
+function locationPrint()
 {
     var locValue = this.getAttribute('data-value');
     var text = displayLocation.textContent.trim();
@@ -39,16 +69,8 @@ function calc()
 }    
 
 
-// JS for date and Time page
-var date = document.getElementById("date");
-var displaytime = document.getElementById("display-time");
-var formdate = document.getElementById("form-date");
+// // JS for confirmation 
+// var displayLocationConfirmation = document.getElementById("displayLocation");
+   
+// displayLocationConfirmation.innerHTML = fname;
 
-formdate.addEventListener("submit", funx )
-
-function funx()
-{
-    var aa = date.value;
-
-    displaytime.innerText = aa;
-}

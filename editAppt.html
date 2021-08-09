@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Title, Logo & CSS -->
+    <title> GetVaxxed: Step 1/3</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="a4.css">
+
+</head>
+
+<body>
+    <!-- NAVIGATION BAR   -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="logo-img" src="logo.jpg" alt="logo" height="30px" width="30px">
+                GetVaxxed
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="resources.html">Know more about Vaccinations</a></li>
+                            <li><a class="dropdown-item" href="resources.html">How to get Vaccination</a></li>
+                            <li><a class="dropdown-item" href="resources.html">What to expect</a></li>
+                            <li><a class="dropdown-item" href="resources.html">Do's and Dont's</a></li>
+                            <li><a class="dropdown-item" href="resources.html">Vaccine safety</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://covid-19.ontario.ca/covid-19-vaccines-ontario?gclid=CjwKCAjw3riIBhAwEiwAzD3TibQ2i8iCL67Ie7QrhgFxv-1yCqBaDlVCT-HLEUXQj6WW7X5XqkRqFhoC90YQAvD_BwE&gclsrc=aw.ds">Vaccination
+                                    Coverage Report</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Help
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="help.html">Frequenty Asked Questions</a></li>
+                            <li><a class="dropdown-item" href="help.html">Raise an issue</a></li>
+                            <li><a class="dropdown-item" href="help.html">View Helplines</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contactUs.html">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">About us</a>
+                    </li>
+
+                </ul>
+
+                <div class="btn-group me-4" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio1"> English </label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio2"> Français </label>
+
+                </div>
+
+                <form class="d-flex me-5">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+                <div class="mx-2">
+                    <a class="btn btn-primary btn-danger" href="" role="button">Settings</a>
+                    <a class="btn btn-primary btn-danger" href="" role="button">Profile</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB  -->
+    <div class="container mt-4 px-5 py-1 breadcrumb">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="location.html">Appointments</a> </li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- FUNCTION -->
+    <div class="container mt-4 px-5 py-1">
+        <h2 class="center"> Your Appointments: </h2>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"># 1</h5>
+                <h5> Recipient : _______________________ </h5>
+                <h5> Clinic : _______________________ </h5>
+                <h5> Date : _______________________ </h5>
+                <h5> Time : _______________________ </h5>
+                <h5> Vaccine : _______________________ </h5>
+                <br>
+                <a class="btn btn-primary btn-primary btn-lg" href="location.html" role="button">Edit</a>
+                <a class="btn btn-primary btn-danger btn-lg mx-3" href="" role="button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Cancel</a>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"># 2</h5>
+                <h5> Recipient : _______________________ </h5>
+                <h5> Clinic : _______________________ </h5>
+                <h5> Date : _______________________ </h5>
+                <h5> Time : _______________________ </h5>
+                <h5> Vaccine : _______________________ </h5>
+                <br>
+                <a class="btn btn-primary btn-primary btn-lg" href="location.html" role="button">Edit</a>
+                <a class="btn btn-primary btn-danger btn-lg mx-3" href="" role="button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Cancel</a>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"># 3</h5>
+                <h5> Recipient : _______________________ </h5>
+                <h5> Clinic : _______________________ </h5>
+                <h5> Date : _______________________ </h5>
+                <h5> Time : _______________________ </h5>
+                <h5> Vaccine : _______________________ </h5>
+                <br>
+                <a class="btn btn-primary btn-primary btn-lg" href="location.html" role="button">Edit</a>
+                <a class="btn btn-primary btn-danger btn-lg mx-3" href="" role="button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Cancel</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            Are you sure you want to cancel this appointment ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No, don't cancel</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+    <div class="container mt-4 px-5 py-1 center">
+        <a class="btn btn-primary btn-primary btn-lg mx-3" href="home.html" role="button">Return to Home</a>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- MY javascript -->
+    <script type="text/javascript" src="a4.js"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
