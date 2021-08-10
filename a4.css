@@ -29,4 +29,36 @@
     border: 2px solid black;
 }
 
+.dateTable{
+    display: none;
+}
 
+.divBy2{
+    display: none;
+}
+
+.divBy3{
+    display: none;
+}
+.divBy5{
+    display: none;
+}
+.divBy7{
+    display: none;
+}
+.divBy11{
+    display: none;
+}
+
+
+#vaccinationOptions{
+    display: none;
+}
+
+#vaccinationOptions:target{
+    display: block;
+}
+
+.toggleBtn{
+    width:140px;
+}

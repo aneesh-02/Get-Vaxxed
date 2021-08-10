@@ -70,63 +70,6 @@ function locationPrint()
    
 // displayLocationConfirmation.innerHTML = fname;
 
-//JS for date and time
-
-var submitDate = document.getElementById("submitDate");
-submitDate.addEventListener("click", Dateprint)
-function Dateprint(e)
-{
-    e.preventDefault();
-    var date = document.getElementById("date").value;
-    var dateString = date.toString();
-    var dateNumber= dateString.slice(8,10); 
-    // console.log(dateString ;
-    console.log(dateNumber);
-    // dateNumber now had the date-number stored in it.
-
-//     var displayTime1 = document.getElementById("displayTime1");
-//     var displayTime2 = document.getElementById("displayTime2");
-//     var displayTime3 = document.getElementById("displayTime3");
-//     var displayTime4 = document.getElementById("displayTime4");
-//     var displayTime5 = document.getElementById("displayTime5");
-//     if(dateNumber == 1 || dateNumber == 13 || dateNumber == 17 || dateNumber == 19 || dateNumber == 23 ||dateNumber == 29 ||dateNumber == 31)
-//     {
-//         displayTime1.innerHTML = "Not Available";
-//     }
-//     else if(dateNumber == 30)
-//     {
-//         displayTime1.innerHTML = "10:00 - 10:10   <br> 11:20 - 11:30 <br> 14:10 - 14:20  ";
-//     }
-//     else if(dateNumber % 2 == 0)
-//     {
-//         displayTime1.innerHTML = "10:00 - 10:10"; 
-//     }
-//     else if(dateNumber % 3 == 0)
-//     {
-//         displayTime1.innerHTML = "11:20 - 11:30";        
-//     }
-//     else if(dateNumber % 5 == 0)
-//     {
-//         displayTime1.innerHTML = "14:10 - 14:20"; 
-//     }
-//     else if(dateNumber % 7 == 0)
-//     {
-//         displayTime1.innerHTML = "15:40 - 15:50"; 
-//     }
-//     else if(dateNumber % 11 == 0)
-//     {
-//         displayTime1.innerHTML = "17:30 - 17:40"; 
-//     }
-    // else if()
-    // else
-    // {
-    //     displayTime1.innerHTML = "Not Available"; 
-    // }
-
-    // displayTime.innerHTML = dateNumber ; 
-}
-
-
 
 //JS for login page
 
@@ -162,10 +105,109 @@ function validateLogin(){
     }
 };
 
-document.getElementById("password")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("loginBtn").click();
+// document.getElementById("password")
+//     .addEventListener("keyup", function(event) {
+//     event.preventDefault();
+//     if (event.keyCode === 13) {
+//         document.getElementById("loginBtn").click();
+//     }
+// });
+
+// Set min date to today's date
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("date").setAttribute("min", today);
+
+
+//JS for date and time
+
+var submitDate = document.getElementById("submitDate");
+submitDate.addEventListener("click", Dateprint)
+function Dateprint(e)
+{
+    e.preventDefault();
+    var date = document.getElementById("date").value;
+    var dateString = date.toString();
+    var dateNumber = dateString.slice(8,10); 
+    console.log(dateString);
+    console.log(dateNumber);
+    // dateNumber now had the date-number stored in it.
+
+ if(dateString == ''){
+     alert("Enter Date");
+ }
+ else{
+ if(dateNumber % 2 == 0 || dateNumber % 3 == 0 || dateNumber % 5 == 0 || dateNumber % 7 == 0 || dateNumber % 11 == 0){
+    if(dateNumber % 2 == 0){
+        $('.dateTable').show(); 
+        $('.divBy2').show();   
     }
-});
+    else{
+        $('.divBy2').hide();
+    }
+
+    if(dateNumber % 3 == 0){
+        $('.dateTable').show(); 
+        $('.divBy3').show();  
+    }
+    else{
+        $('.divBy3').hide();
+    }
+
+    if(dateNumber % 5 == 0){
+        $('.dateTable').show(); 
+        $('.divBy5').show();  
+    }
+    else{
+        $('.divBy5').hide();
+    }
+
+    if(dateNumber % 7 == 0){
+        $('.dateTable').show(); 
+        $('.divBy7').show();  
+    }
+    else{
+        $('.divBy7').hide();
+    }
+
+    if(dateNumber % 11 == 0){
+        $('.dateTable').show(); 
+        $('.divBy11').show();  
+    }
+    else{
+        $('.divBy11').hide();
+    }
+ }
+ else{
+    $('.dateTable').hide();
+     $('.divBy2').hide();
+     $('.divBy3').hide();
+     $('.divBy5').hide();
+     $('.divBy7').hide();
+     $('.divBy11').hide();
+    
+     alert("No Time Slots Available");
+ }
+}
+};
+
+// JS for age
+function noFunc()
+{
+    alert("Sorry you are under age to get a vaccination right now");
+}
+function yesFunc()
+{
+    alert("You are eligible to get free vaccinations from Health Canada!");
+}
