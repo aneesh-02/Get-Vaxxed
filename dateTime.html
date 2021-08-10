@@ -113,111 +113,78 @@
     <!-- FUNCTION -->
     <div class="container mt-4 px-5 py-1">
         <h2 class="center"> Select a date for the appointment at this location: </h2> <br>
-
         <form class="d-flex me-5 location" id="form-date">
             <input class="form-control mx-5" type="date" id="date" name="date">
-            <button type="submit">Submit</button>
+            <button class="btn btn-outline-primary mx-5" type="submit" id="submitDate"><h4>Show avaiable time slots for this date</h4></button>
         </form>
         <br>
-        <button class="btn btn-outline-primary mx-5" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <h6>Search time slots for this date</h6>
-        </button>
-
-        <!-- <div class="alert alert-warning alert-dismissible me-5 my-2 p-3 fade show" role="alert" id="liveAlert">
-            <strong>Note!</strong> This website is accessing your device location.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div> -->
-
     </div>
-  
-  <!-- Modal -->
-  <div class="modal fade modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">List of available time slots </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="container  location-table">
-        
-                <table class="table table-hover table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">From </th>
-                        <th scope="col">To </th>
-                        <th scope="col"> </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>01:00 pm</td>
-                        <td>01:10 pm</td>
-                        <td><button type="button" class="btn btn-outline-success">Select</button></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>01:00 pm</td>
-                        <td>01:10 pm</td>
-                        <td><button type="button" class="btn btn-outline-success">Select</button></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>01:10 pm</td>
-                        <td>01:20 pm</td>
-                        <td><button type="button" class="btn btn-outline-success">Select</button></td>
-                      </tr>
-                      <tr>
-                       
-                    </tbody>
-                  </table>
-                
-            
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
-
-  
-    
     <div class="container mt-4 px-5 py-1 center">
-     <h4> Time selected : <div id="display-time">_________ </div> </h4>  
-     <br>
-     <a class="btn btn-primary btn-danger btn-lg mx-3" href="location.html" role="button">Previous</a>
-      <a class="btn btn-primary btn-success btn-lg mx-3" href="personalDetails.html" role="button">Next</a>
+        <h4> Available Time Slot : 
+        </h4>
+        <br>
     </div>
-      
-      
-  </div>
 
 
+    <div class="container  location-table">
+
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">From - To </th>
+                    <!-- <th scope="col">To </th> -->
+                    <th scope="col"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><div id="displayTime1">Not Available </div></td>
+                    <!-- <td>01:10 pm</td> -->
+                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><div id="displayTime2">Not Available </div></td>
+                    <!-- <td>01:10 pm</td> -->
+                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><div id="displayTime3">Not Available </div></td>
+                    <!-- <td>01:10 pm</td> -->
+                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td><div id="displayTime4">Not Available</div></td>
+                    <!-- <td>01:10 pm</td> -->
+                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td><div id="displayTime5">Not Available</div></td>
+                    <!-- <td>01:10 pm</td> -->
+                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                </tr>
+               
+
+            </tbody>
+        </table>
+    </div>
 
 
+    <div class="container mt-4 px-5 py-1 center">
+        <a class="btn btn-primary btn-danger btn-lg mx-3" href="location.html" role="button">Previous</a>
+        <a class="btn btn-primary btn-success btn-lg mx-3" href="personalDetails.html" role="button">Next</a>
+    </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- MY javascript -->
+    <script type="text/javascript" src="a4.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
