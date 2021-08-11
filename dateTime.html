@@ -15,6 +15,7 @@
     <link rel="icon" type="image/x-icon" href="logo.jpg">
     <link rel="stylesheet" href="a4.css">
 
+
 </head>
 
 <body>
@@ -127,7 +128,7 @@
         <br>
     </div>
 
-    <div class="container location-table dateTable" style="width: 60%;">
+    <div class="container location-table dateTable" style="width: 30%; text-align: center;">
 
         <table class="table table-hover table-striped" >
             <thead>
@@ -143,32 +144,32 @@
                     <!-- <th scope="row">1</th> -->
                     <td><div id="displayTime1">10:00 - 10:10 </div></td>
                     <!-- <td>01:10 pm</td> -->
-                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                    <td><input class="form-check-input timeSelect" type="radio" name="selectTime" id="radio1" value="1"></td>
                 </tr>
                
                 <tr class="divBy3" >
                     <!-- <th scope="row">2</th> -->
                     <td><div id="displayTime2">11:20 - 11:30</div></td>
                     <!-- <td>01:10 pm</td> -->
-                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                     <td><input class="form-check-input timeSelect" type="radio" name="selectTime" id="radio2" value="2"></td>
                 </tr>
                 <tr class="divBy5" >
                     <!-- <th scope="row">3</th> -->
                     <td><div id="displayTime3">14:10 - 14:20 </div></td>
                     <!-- <td>01:10 pm</td> -->
-                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                     <td><input class="form-check-input timeSelect" type="radio" name="selectTime" id="radio3" value="3"></td>
                 </tr>
                 <tr class="divBy7" >
                     <!-- <th scope="row">4</th> -->
                     <td><div id="displayTime4">15:40 - 15:50</div></td>
                     <!-- <td>01:10 pm</td> -->
-                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                     <td><input class="form-check-input timeSelect" type="radio" name="selectTime" id="radio4" value="4"></td>
                 </tr>
                 <tr class="divBy11" >
                     <!-- <th scope="row">5</th> -->
                     <td><div id="displayTime5">17:30 - 17:40</div></td>
                     <!-- <td>01:10 pm</td> -->
-                    <td><button type="button" class="btn btn-outline-success">Select</button></td>
+                     <td><input class="form-check-input timeSelect" type="radio" name="selectTime" id="radio5" value="5"></td>
                 </tr>
                
 
@@ -179,7 +180,7 @@
 
     <div class="container mt-4 px-5 py-1 center">
         <a class="btn btn-primary btn-danger btn-lg mx-3 toggleBtn" location.html" role="button">Previous</a>
-        <a class="btn btn-primary btn-success btn-lg mx-3 toggleBtn disabled"  href="personalDetails.html" role="button">Next</a>
+        <a class="btn btn-primary btn-success btn-lg mx-3 toggleBtn disabled"  href="personalDetails.html" role="button" id="nextBtn">Next</a>
     </div>
 
 
@@ -199,6 +200,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     -->
+
+    
+    <script>
+        $(document).ready(function () {
+            $('#nextBtn').attr('disabled', 'true');
+    
+            $('input:radio[name=selectTime]').click(function () {
+                var checkval = $('input:radio[name=selectTime]:checked').val();
+                if (checkval == '1' || checkval == '2' || checkval == '3' || checkval == '4' || checkval == '5') {
+                    $('#nextBtn').removeClass('disabled');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

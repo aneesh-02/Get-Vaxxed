@@ -27,6 +27,7 @@
 // JS for location page
 var buttons = document.getElementsByClassName("selectButton");
 var displayLocation = document.getElementById("displayLocation");
+var inputField = document.getElementById("inputLocation");
 
 for (var i = 0; i < buttons.length; i++)
 {
@@ -40,23 +41,43 @@ function locationPrint()
 
     if(locValue == "location 1")
     {
-        displayLocation.innerText = "Shoppers Drug Mart 800, 265 Port Union Rd.";
+        displayLocation.innerText = "Shoppers Drug Mart 800, 265 Port Union Rd";
+        inputField.value = "Shoppers Drug Mart 800, 265 Port Union Rd";
+        $("#exampleModal").modal("hide");
+        $('.dateTable').show(); 
+        $('#nextBtn').removeClass('disabled');
     }
     else if(locValue == "location 2")
     {
         displayLocation.innerText = "Guildcrest Pharmacy, 629 Markham Rd";
+        inputField.value = "Guildcrest Pharmacy, 629 Markham Rd";
+        $("#exampleModal").modal("hide");
+        $('.dateTable').show(); 
+        $('#nextBtn').removeClass('disabled');
     }
     else if(locValue == "location 3")
     {
-        displayLocation.innerText = "No Frills, 255 Morningside Ave  ";
+        displayLocation.innerText = "No Frills, 255 Morningside Ave";
+        inputField.value = "No Frills, 255 Morningside Ave";
+        $("#exampleModal").modal("hide");
+        $('.dateTable').show(); 
+        $('#nextBtn').removeClass('disabled');
     }
     else if(locValue == "location 4")
     {
-        displayLocation.innerText = "Metro Pharmacy, 3401 LAWRENCE AVE E ";
+        displayLocation.innerText = "Metro Pharmacy, 3401 Lawrence Ave East";
+        inputField.value = "Metro Pharmacy, 3401 Lawrence Ave East";
+        $("#exampleModal").modal("hide");
+        $('.dateTable').show(); 
+        $('#nextBtn').removeClass('disabled');
     }
     else if(locValue == "location 5")
     {
-        displayLocation.innerText = " West Hill Pharmasave, 3221 Eglinton Avenue East";
+        displayLocation.innerText = "West Hill Pharmasave, 3221 Eglinton Avenue East";
+        inputField.value = "West Hill Pharmasave, 3221 Eglinton Avenue East";
+        $("#exampleModal").modal("hide");
+        $('.dateTable').show(); 
+        $('#nextBtn').removeClass('disabled');
     }
     else
     {
@@ -143,9 +164,9 @@ function Dateprint(e)
     console.log(dateString);
     console.log(dateNumber);
     // dateNumber now had the date-number stored in it.
-
+    $('#nextBtn').addClass( "disabled" )
  if(dateString == ''){
-     alert("Enter Date");
+     alert("Please Select The Date");
  }
  else{
  if(dateNumber % 2 == 0 || dateNumber % 3 == 0 || dateNumber % 5 == 0 || dateNumber % 7 == 0 || dateNumber % 11 == 0){
