@@ -115,8 +115,8 @@
     <div class="container mt-4 px-5 py-1">
         <h2 class="center"> Select a date for the appointment at this location: </h2> <br>
         <form class="d-flex me-5 location" id="form-date">
-            <input class="form-control mx-5" type="date" id="date" name="date" min='2021-08-09'>
-            <button class="btn btn-outline-primary mx-5" type="submit" id="submitDate"><h4>Show avaiable time slots for this date</h4></button>
+            <input class="form-control mx-5" type="date" id="dateTimeSlot" name="date" min='2021-08-09'>
+            <button class="btn btn-outline-primary mx-5" type="submit" id="submitDate" style="width: 500px;" onclick="showTimeSlots"><h4>Show Timeslots</h4></button>
         </form>
         <br>
     </div>
@@ -213,6 +213,23 @@
                 }
             });
         });
+
+        // Set min date to today's date
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10){
+                dd='0'+dd
+            } 
+            if(mm<10){
+                mm='0'+mm
+            } 
+
+        today = yyyy+'-'+mm+'-'+dd;
+        document.getElementById("dateTimeSlot").setAttribute("min", today);
+
     </script>
 </body>
 

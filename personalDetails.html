@@ -134,16 +134,16 @@
         <div class="row">
             <div class="col">
                 <h5>First Name:</h5>
-                <input type="text" class="form-control" placeholder="(autofilled)" aria-label="First name">
+                <input type="text" class="form-control" id="field1" placeholder="" aria-label="First name" style="height: 48px;">
             </div>
             <div class="col">
                 <h5>Middle Name:</h5>
-                <input type="text" class="form-control" placeholder="(autofilled)" aria-label="Last name">
+                <input type="text" class="form-control" placeholder="(Optional)" aria-label="Middle name" style="height: 48px;">
             </div>
 
             <div class="col">
                 <h5>Last Name:</h5>
-                <input type="text" class="form-control" placeholder="(autofilled)" aria-label="Last name">
+                <input type="text" class="form-control" id="field2" placeholder="" aria-label="Last name" style="height: 48px;">
             </div>
         </div>
         <br>
@@ -151,22 +151,19 @@
             <label for="exampleFormControlInput4" class="form-label ">
                 <h5>Email address:</h5>
             </label>
-            <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1"
-            placeholder="(autofilled)">
+            <input type="email" class="form-control form-control-lg" id="field3" placeholder="">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput5" class="form-label">
                 <h5>Phone Number</h5>
             </label>
-            <input type="number" class="form-control form-control-lg" id="exampleFormControlInput1"
-                placeholder="">
+            <input type="number" class="form-control form-control-lg" id="field4" placeholder="">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput6" class="form-label">
                 <h5>Health Card Number</h5>
             </label>
-            <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
-                placeholder="">
+            <input type="text" class="form-control form-control-lg" id="field5" placeholder="">
         </div>
     </div>
 
@@ -176,29 +173,8 @@
         <br>
         <a class="btn btn-primary btn-danger btn-lg mx-3" href="dateTime.html".html" role="button">Previous</a>
         <a class="btn btn-primary btn-danger btn-lg mx-3" href="home.html" role="button">Cancel</a>
-        <a class="btn btn-primary btn-success btn-lg mx-3" href="confirmation.html" role="button">Confrim & Book</a>
+        <a class="btn btn-primary btn-success btn-lg mx-3 disabled" href="confirmation.html" role="button" id="submitBtn">Confrim & Book</a>
     </div>
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -208,7 +184,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+        <script type="text/javascript" src="a4.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        
+        <script>
+            $(function () {
+            $('#submitBtn').attr('disabled', true);
+            $('#field5').change(function () {
+                if ($('#field1').val() != '' && $('#field2').val() != '' && $('#field3').val() != '' && $('#field4').val() != '' && $('#field5').val() != '') {
+                    $('#submitBtn').removeClass('disabled');
+                } else {
+                    $('#submitBtn').attr('disabled', true);
+                }
+            });
+        });
 
+        </script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>

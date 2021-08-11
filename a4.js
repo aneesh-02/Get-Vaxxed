@@ -28,7 +28,6 @@
 var buttons = document.getElementsByClassName("selectButton");
 var displayLocation = document.getElementById("displayLocation");
 var inputField = document.getElementById("inputLocation");
-
 for (var i = 0; i < buttons.length; i++)
 {
     buttons[i].addEventListener('click', locationPrint)
@@ -45,7 +44,7 @@ function locationPrint()
         inputField.value = "Shoppers Drug Mart 800, 265 Port Union Rd";
         $("#exampleModal").modal("hide");
         $('.dateTable').show(); 
-        $('#nextBtn').removeClass('disabled');
+        $('#nextBtn').removeClass('disabled');   
     }
     else if(locValue == "location 2")
     {
@@ -126,39 +125,16 @@ function validateLogin(){
     }
 };
 
-// document.getElementById("password")
-//     .addEventListener("keyup", function(event) {
-//     event.preventDefault();
-//     if (event.keyCode === 13) {
-//         document.getElementById("loginBtn").click();
-//     }
-// });
-
-// Set min date to today's date
-
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear();
-if(dd<10){
-        dd='0'+dd
-    } 
-    if(mm<10){
-        mm='0'+mm
-    } 
-
-today = yyyy+'-'+mm+'-'+dd;
-document.getElementById("date").setAttribute("min", today);
-
-
 //JS for date and time
 
 var submitDate = document.getElementById("submitDate");
-submitDate.addEventListener("click", Dateprint)
+if(submitDate){
+    submitDate.addEventListener("click", Dateprint);
+}
 function Dateprint(e)
 {
     e.preventDefault();
-    var date = document.getElementById("date").value;
+    var date = document.getElementById("dateTimeSlot").value;
     var dateString = date.toString();
     var dateNumber = dateString.slice(8,10); 
     console.log(dateString);
@@ -232,3 +208,35 @@ function yesFunc()
 {
     alert("You are eligible to get free vaccinations from Health Canada!");
 }
+
+
+//JS for date and time
+var firstDate = document.getElementById("firstDate");
+var secondDate = document.getElementById("secondDate");
+var getDate = document.getElementById("printDate");
+if(getDate){
+    getDate.addEventListener("click", printDate)
+}
+function printDate(e)
+{
+    e.preventDefault();
+    var date = document.getElementById("date").value;
+    var dateString = date.toString();
+    var dateNumber = dateString.slice(8,10); 
+    console.log(dateString);
+    console.log(dateNumber);
+    var newDate = new Date(dateString);
+    if(dateString == '') {
+        alert("Please Select The Date");
+        
+    } 
+    else{
+     firstDate.innerText = dateString;
+     newDate.setDate(newDate.getDate() + 28);
+     var dateFormated = newDate.toISOString().substr(0,10);
+     secondDate.innerText = dateFormated;
+     $('#confNext').removeClass('disabled');
+     document.getElementById("firstDate").style.color = 'blue';
+     document.getElementById("secondDate").style.color = 'blue';
+    }
+};

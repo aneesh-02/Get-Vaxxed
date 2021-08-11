@@ -14,11 +14,10 @@
     color: rgb(31, 97, 31);   
 }
 
-.breadcrumb
+#breadcrumb
 {
     font-size: 1.5rem;
     /* background-color: rgba(69, 226, 213, 0.418); */
-    border-bottom: 1px solid black;
     /* color: black; */
     /* text-decoration: none; */
 }
@@ -62,4 +61,3 @@
 .toggleBtn{
     width:140px;
 }
-
