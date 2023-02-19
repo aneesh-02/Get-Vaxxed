@@ -59,7 +59,7 @@ function locationPrint()
         displayLocation.innerText = "No Frills, 255 Morningside Ave";
         inputField.value = "No Frills, 255 Morningside Ave";
         $("#exampleModal").modal("hide");
-        $('.dateTable').show(); 
+        $('.dateTable').show();  
         $('#nextBtn').removeClass('disabled');
     }
     else if(locValue == "location 4")
